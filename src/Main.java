@@ -678,7 +678,12 @@ public class Main {
                                                                                                                     stop6=true;
                                                                                                                 }else {
                                                                                                                     //Si il y a une date dans la phrase en rapport avec le meurtre
-                                                                                                                    
+                                                                                                                    if (tokenNoeuds1.item(11).getFirstChild().getNodeValue().equals("DATE") && !stop3) {
+                                                                                                                        //On la recupere
+                                                                                                                        //System.out.println("DATE : "+tokenNoeuds1.item(13).getFirstChild().getNodeValue());
+                                                                                                                        stop3 = true;
+                                                                                                                        s+="in "+tokenNoeuds1.item(1).getFirstChild().getNodeValue() +" ";
+                                                                                                                    }
 
 
                                                                                                                     //Si il y a un Lieu LOCATION dans la phrase en rapport avec le meurtre
