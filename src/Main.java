@@ -18,38 +18,7 @@ public class Main {
 
     public static void main(String[]args) {
         ArrayList<String> verbes = new ArrayList<String>();
-        verbes.add("murder");
-        verbes.add("kill");
-        verbes.add("slay");
-        //verbes.add("hit");
-        verbes.add("dispatch");
-        verbes.add("bump off");
-        verbes.add("polish off");
-        verbes.add("off");
-        verbes.add("remove");
-        verbes.add("shoot");
-        verbes.add("eliminate");
-        verbes.add("decimate");
-        verbes.add("wipe out");
-        verbes.add("exterminate");
-        verbes.add("carry off");
-        verbes.add("eradicate");
-        verbes.add("drown");
-        verbes.add("massacre");
-        verbes.add("slaughter");
-        verbes.add("mow down");
-        verbes.add("poison");
-        verbes.add("stone");
-        verbes.add("saber");
-        verbes.add("sabre");
-        verbes.add("asphyxiate");
-        verbes.add("strangle");
-        verbes.add("assassinate");
-        verbes.add("execute");
-        verbes.add("put to death");
-        verbes.add("pip");
-        verbes.add("electrocute");
-        verbes.add("attack");
+
 
 
         ArrayList<String> nomsV = new ArrayList<String>();
