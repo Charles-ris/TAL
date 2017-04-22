@@ -103,6 +103,8 @@ public class Main {
         int tmp4=0;
         int comptV=0;
 
+        int compt=1;
+
         String s="";
 
 
@@ -194,8 +196,12 @@ public class Main {
                                                             if(s.length()>0){
                                                                // System.out.println("");
                                                                 //System.out.println();
-                                                                System.out.println("- "+s);
-                                                                System.out.println("");
+                                                                compt+=1;
+                                                                if (compt<=50){
+                                                                    System.out.println(compt+") "+s);
+                                                                    System.out.println("");
+                                                                }
+
                                                                 //System.out.println("");
                                                             }
                                                             s="";
@@ -258,6 +264,7 @@ public class Main {
                                                                                             (tokenNoeuds1.item(9).getFirstChild().getNodeValue().equals("VB") ||
                                                                                                     tokenNoeuds1.item(9).getFirstChild().getNodeValue().equals("VBG") ||
                                                                                                     tokenNoeuds1.item(9).getFirstChild().getNodeValue().equals("VBD"))) {
+
                                                                                         //Si le mot est un verbe
 
                                                                                         if (verbes.contains(tokenNoeuds1.item(3).getFirstChild().getNodeValue())) {
@@ -411,8 +418,12 @@ public class Main {
                                                                                     if (tokenNoeuds1.item(11).getFirstChild().getNodeValue().equals("DATE") && !stop3) {
                                                                                         //On la recupere
                                                                                         //System.out.println("DATE : "+tokenNoeuds1.item(13).getFirstChild().getNodeValue());
-                                                                                        s+="in "+tokenNoeuds1.item(1).getFirstChild().getNodeValue() +" ";
+                                                                                        if(!tokenNoeuds1.item(1).getFirstChild().getNodeValue().equals("currently") && !tokenNoeuds1.item(1).getFirstChild().getNodeValue().equals("the")){
+                                                                                            s+="in "+tokenNoeuds1.item(1).getFirstChild().getNodeValue() +" ";
+                                                                                        }
+                                                                                       // s+="in "+tokenNoeuds1.item(1).getFirstChild().getNodeValue() +" ";
                                                                                         stop3=true;
+                                                                                        stop5=true;
                                                                                     }
 
 
@@ -421,6 +432,7 @@ public class Main {
                                                                                         //On la recupere
                                                                                         //System.out.println("LIEU : "+tokenNoeuds1.item(1).getFirstChild().getNodeValue());
                                                                                         s+="at "+tokenNoeuds1.item(1).getFirstChild().getNodeValue() +" ";
+
                                                                                     }
                                                                                 }
                                                                             }
@@ -443,7 +455,9 @@ public class Main {
                                                                                             //On la recupere
                                                                                             //System.out.println("DATE : "+tokenNoeuds1.item(13).getFirstChild().getNodeValue());
                                                                                             stop3 = true;
-                                                                                            s+="in "+tokenNoeuds1.item(1).getFirstChild().getNodeValue() +" ";
+                                                                                            if(!tokenNoeuds1.item(1).getFirstChild().getNodeValue().equals("currently") && !tokenNoeuds1.item(1).getFirstChild().getNodeValue().equals("the")){
+                                                                                                s+="in "+tokenNoeuds1.item(1).getFirstChild().getNodeValue() +" ";
+                                                                                            }
                                                                                         }
 
 
@@ -452,6 +466,7 @@ public class Main {
                                                                                             //On la recupere
                                                                                             //System.out.println("LIEU : "+tokenNoeuds1.item(1).getFirstChild().getNodeValue());
                                                                                             s+="at "+tokenNoeuds1.item(1).getFirstChild().getNodeValue() +" ";
+                                                                                            stop6=true;
                                                                                         }
                                                                                     }
                                                                                 }
@@ -650,7 +665,10 @@ public class Main {
                                                                                                                 if (tokenNoeuds1.item(11).getFirstChild().getNodeValue().equals("DATE") && !stop3) {
                                                                                                                     //On la recupere
                                                                                                                     //System.out.println("DATE : "+tokenNoeuds1.item(13).getFirstChild().getNodeValue());
-                                                                                                                    s+="in "+tokenNoeuds1.item(1).getFirstChild().getNodeValue() +" ";
+                                                                                                                    if(!tokenNoeuds1.item(1).getFirstChild().getNodeValue().equals("currently") && !tokenNoeuds1.item(1).getFirstChild().getNodeValue().equals("the")){
+                                                                                                                        s+="in "+tokenNoeuds1.item(1).getFirstChild().getNodeValue() +" ";
+                                                                                                                    }
+                                                                                                                    stop5=true;
                                                                                                                     stop3=true;
                                                                                                                 }
 
@@ -659,6 +677,7 @@ public class Main {
                                                                                                                 if (tokenNoeuds1.item(11).getFirstChild().getNodeValue().equals("LOCATION")) {
                                                                                                                     //On la recupere
                                                                                                                     //System.out.println("LIEU : "+tokenNoeuds1.item(1).getFirstChild().getNodeValue());
+                                                                                                                    stop5=true;
                                                                                                                     s+="at "+tokenNoeuds1.item(1).getFirstChild().getNodeValue() +" ";
                                                                                                                 }
                                                                                                             }
@@ -682,7 +701,9 @@ public class Main {
                                                                                                                         //On la recupere
                                                                                                                         //System.out.println("DATE : "+tokenNoeuds1.item(13).getFirstChild().getNodeValue());
                                                                                                                         stop3 = true;
-                                                                                                                        s+="in "+tokenNoeuds1.item(1).getFirstChild().getNodeValue() +" ";
+                                                                                                                        if(!tokenNoeuds1.item(1).getFirstChild().getNodeValue().equals("currently") && !tokenNoeuds1.item(1).getFirstChild().getNodeValue().equals("the")){
+                                                                                                                            s+="in "+tokenNoeuds1.item(1).getFirstChild().getNodeValue() +" ";
+                                                                                                                        }
                                                                                                                     }
 
 
@@ -691,6 +712,7 @@ public class Main {
                                                                                                                         //On la recupere
                                                                                                                         //System.out.println("LIEU : "+tokenNoeuds1.item(1).getFirstChild().getNodeValue());
                                                                                                                         s+="at "+tokenNoeuds1.item(1).getFirstChild().getNodeValue() +" ";
+                                                                                                                        stop6=true;
                                                                                                                     }
                                                                                                                 }
                                                                                                             }
