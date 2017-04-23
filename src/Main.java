@@ -18,7 +18,38 @@ public class Main {
 
     public static void main(String[]args) {
         ArrayList<String> verbes = new ArrayList<String>();
-
+        verbes.add("murder");
+        verbes.add("kill");
+        verbes.add("slay");
+        //verbes.add("hit");
+        verbes.add("dispatch");
+        verbes.add("bump off");
+        verbes.add("polish off");
+        verbes.add("off");
+        verbes.add("remove");
+        verbes.add("shoot");
+        verbes.add("eliminate");
+        verbes.add("decimate");
+        verbes.add("wipe out");
+        verbes.add("exterminate");
+        verbes.add("carry off");
+        verbes.add("eradicate");
+        verbes.add("drown");
+        verbes.add("massacre");
+        verbes.add("slaughter");
+        verbes.add("mow down");
+        verbes.add("poison");
+        verbes.add("stone");
+        verbes.add("saber");
+        verbes.add("sabre");
+        verbes.add("asphyxiate");
+        verbes.add("strangle");
+        verbes.add("assassinate");
+        verbes.add("execute");
+        verbes.add("put to death");
+        verbes.add("pip");
+        verbes.add("electrocute");
+        verbes.add("attack");
 
 
         ArrayList<String> nomsV = new ArrayList<String>();
@@ -141,7 +172,7 @@ public class Main {
                                                     NodeList tokenNoeuds = token.getChildNodes();
 
                                                     for(int n = 0; n < tokenNoeuds.getLength(); n++){
-                                                       // System.out.println(tokensNoeuds.item(n).getNodeType());
+                                                        // System.out.println(tokensNoeuds.item(n).getNodeType());
                                                         if(tokenNoeuds.item(n).getNodeType() == Node.ELEMENT_NODE) {
                                                         }
                                                         if(tokenNoeuds.item(1).getFirstChild().getNodeValue().equals("***")){
@@ -163,7 +194,7 @@ public class Main {
                                                             victime=false;
                                                             tmp3=0;
                                                             if(s.length()>0){
-                                                               // System.out.println("");
+                                                                // System.out.println("");
                                                                 //System.out.println();
                                                                 compt+=1;
                                                                 if (compt<=50){
@@ -239,7 +270,7 @@ public class Main {
                                                                                         if (verbes.contains(tokenNoeuds1.item(3).getFirstChild().getNodeValue())) {
                                                                                             //si le verbe est dans la liste
                                                                                             //System.out.println(test);
-                                                                                           // s+=tokenNoeuds1.item(1).getFirstChild().getNodeValue()+" ";
+                                                                                            // s+=tokenNoeuds1.item(1).getFirstChild().getNodeValue()+" ";
                                                                                             stop1 = true;
                                                                                             tmp1 = m1;
                                                                                             stop1 = true;
@@ -250,7 +281,7 @@ public class Main {
                                                                                     }else{
                                                                                         if(nomsV.contains(tokenNoeuds1.item(3).getFirstChild().getNodeValue())){
                                                                                             //Si le mot est dans la liste nomsV
-                                                                                           //* System.out.println("\n  NN   " + tokenNoeuds1.item(1).getFirstChild().getNodeValue());
+                                                                                            //* System.out.println("\n  NN   " + tokenNoeuds1.item(1).getFirstChild().getNodeValue());
                                                                                             tmp1 = m1;
                                                                                             stop1 = true;
                                                                                             //s+="commit a "+tokenNoeuds1.item(1).getFirstChild().getNodeValue()+" ";
@@ -390,7 +421,7 @@ public class Main {
                                                                                         if(!tokenNoeuds1.item(1).getFirstChild().getNodeValue().equals("currently") && !tokenNoeuds1.item(1).getFirstChild().getNodeValue().equals("the")){
                                                                                             s+="in "+tokenNoeuds1.item(1).getFirstChild().getNodeValue() +" ";
                                                                                         }
-                                                                                       // s+="in "+tokenNoeuds1.item(1).getFirstChild().getNodeValue() +" ";
+                                                                                        // s+="in "+tokenNoeuds1.item(1).getFirstChild().getNodeValue() +" ";
                                                                                         stop3=true;
                                                                                         stop5=true;
                                                                                     }
@@ -577,7 +608,7 @@ public class Main {
                                                                                                                         //System.out.println(killer+"hbunij,kolpji,kl;");
                                                                                                                         //s+=tokenNoeuds1.item(1).getFirstChild().getNodeValue() +" ";
                                                                                                                         victime=true;
-                                                                                                                       // System.out.println(killer+"     ALLLO ALLO ALLO      "+victime);
+                                                                                                                        // System.out.println(killer+"     ALLLO ALLO ALLO      "+victime);
                                                                                                                     }
 
 
@@ -586,7 +617,7 @@ public class Main {
                                                                                                             }
                                                                                                         }
 
-                                                                                                       //System.out.print(tokenNoeuds1.item(1).getFirstChild().getNodeValue() + " ");
+                                                                                                        //System.out.print(tokenNoeuds1.item(1).getFirstChild().getNodeValue() + " ");
 
                                                                                                         //Si on a trouvé un pronom possessif
                                                                                                         if (stop2) {
@@ -718,13 +749,12 @@ public class Main {
                                                             }
                                                         }
                                                         //if(tokenNoeuds.item(9).getNodeValue().equals("PERSON") && tokenNoeuds.item(1).getFirstChild().getNodeValue().charAt(0)=='C'){
-                                                          //  System.out.println(tokenNoeuds.item(1).getFirstChild().getNodeValue());
+                                                        //  System.out.println(tokenNoeuds.item(1).getFirstChild().getNodeValue());
                                                         //}
 
 
                                                     }
 
-                                                    }
                                                 }
                                             }
                                         }
@@ -734,6 +764,7 @@ public class Main {
                         }
                     }
                 }
+            }
 
             for (int i=0;i<person.size();i++){
                 //System.out.println(person.get(i));
@@ -741,8 +772,8 @@ public class Main {
             for (int i=0;i<compteur.size();i++){
                 //System.out.println(compteur.get(i));
             }
-        //System.out.println(pages);
-        //System.out.println(person.size());
+            //System.out.println(pages);
+            //System.out.println(person.size());
             //System.out.print(person.get(0));
 
         } catch (Exception e) {
